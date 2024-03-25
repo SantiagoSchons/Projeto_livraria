@@ -35,6 +35,10 @@ distribution = true
 pre_dev = "python ./scripts/set_my_ip.py"
 dev = "python manage.py runserver 0.0.0.0:19003"
 
-[tool.pdm.autoexport]
+# [tool.pdm.autoexport]
+# filename = "requirements.txt"
+# without-hashes = "true"
+[[tool.pdm.autoexport]]
 filename = "requirements.txt"
 without-hashes = "true"
+
