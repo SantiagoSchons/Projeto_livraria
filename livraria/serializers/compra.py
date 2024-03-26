@@ -14,12 +14,11 @@ class ItensCompraSerializer(ModelSerializer):
         fields = ["livro", "quantidade", "total"]
         depth = 1
 
-
-    
 class CompraSerializer(ModelSerializer):
     usuario = CharField(source="usuario.email", read_only=True)
     itens = ItensCompraSerializer(many=True, read_only=True)
     class Meta:
         model = Compra
-        fields = "__all__"
+        fields = "id", "usuario", "status", "total", "itens"
+    
     
