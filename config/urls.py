@@ -7,12 +7,9 @@ from rest_framework.routers import DefaultRouter
 from uploader.router import router as uploader_router
 from livraria.views import  AutorViewSet, CategoriaViewSet, CompraViewSet, EditoraViewSet, LivroViewSet
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView,)
-from drf_spectacular.views import (
-    SpectacularAPIView,
-    SpectacularRedocView,
-    SpectacularSwaggerView,
-)
+from drf_spectacular.views import (SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView,)
 from usuario.views import UsuarioViewSet
+
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
