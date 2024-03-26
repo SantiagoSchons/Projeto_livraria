@@ -8,7 +8,8 @@ class Compra(models.Model):
         REALIZADO = 2, "Realizado"
         PAGO = 3, "Pago"
         ENTREGUE = 4, "Entregue"
-
+    
+    # preco = models.DecimalField(max_digits = 7, decimal_places = 2, null=True)
     usuario = models.ForeignKey(Usuario, on_delete=models.PROTECT, related_name="compras")
     status = models.IntegerField(choices=StatusCompra.choices,  default=StatusCompra.CARRINHO)
 
