@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Categoria, Editora, Autor, Livro, Compra
+from .models import Categoria, Editora, Autor, Livro, Compra, ItensCompra
 
 # admin.site.register(Categoria)
 # admin.site.register(Editora)
@@ -9,7 +9,7 @@ from .models import Categoria, Editora, Autor, Livro, Compra
 # admin.site.register(Livro)
 
 admin.site.register(Compra)
-
+admin.site.register(ItensCompra)
 @admin.register(Autor)
 class AutorAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email')
