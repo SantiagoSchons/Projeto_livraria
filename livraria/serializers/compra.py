@@ -54,6 +54,7 @@ class CriarEditarCompraSerializer(ModelSerializer):
         if itens:
             instance.itens.all().delete()
             for item in itens:
+                item["preco_item"] = item["livro"].preco # Coloca o preço do livro no item de compra
                 ItensCompra.objects.create(compra=instance, **item)
         instance.save()
         return instance
