@@ -8,8 +8,6 @@ from .models import Categoria, Editora, Autor, Livro, Compra, ItensCompra
 # admin.site.register(Autor)
 # admin.site.register(Livro)
 
-admin.site.register(Compra)
-admin.site.register(ItensCompra)
 @admin.register(Autor)
 class AutorAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email')
@@ -38,3 +36,13 @@ class LivroAdmin(admin.ModelAdmin):
     list_filter = ('editora', 'categoria')
     ordering = ('titulo', 'editora', 'categoria')
     list_per_page = 25
+
+#admin.site.register(Compra)
+admin.site.register(ItensCompra)
+
+class ItensCompraInline(admin.TabularInline):
+    model = ItensCompra
+
+@admin.register(Compra)
+class CompraAdmin(admin.ModelAdmin):
+    inlines = [ItensCompraInline]
