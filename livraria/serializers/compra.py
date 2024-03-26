@@ -41,12 +41,14 @@ class CriarEditarCompraSerializer(ModelSerializer):
         fields = ("usuario", "itens")
 
     def create(self, validated_data):
-        itens_data = validated_data.pop("itens")
+        itens = validated_data.pop("itens")
         compra = Compra.objects.create(**validated_data)
-        for item_data in itens_data:
-            ItensCompra.objects.create(compra=compra, **item_data)
+        for item in itens:
+            item["preco_item"] = item["livro"].preco # Coloca o preço do livro no item de compra
+            ItensCompra.objects.create(compra=compra, **item)
         compra.save()
         return compra
+    
     def update(self, instance, validated_data):
         itens = validated_data.pop("itens")
         if itens:
