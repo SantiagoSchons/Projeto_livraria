@@ -15,7 +15,7 @@ class ItensCompraSerializer(ModelSerializer):
         depth = 1
 
 class CompraSerializer(ModelSerializer):
-    usuario = CharField(source="usuario.email", read_only=True)
+    usuario = serializers.HiddenField(default=serializers.CurrentUserDefault())
     itens = ItensCompraSerializer(many=True, read_only=True)
     class Meta:
         model = Compra
