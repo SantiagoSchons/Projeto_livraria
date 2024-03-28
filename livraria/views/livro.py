@@ -17,3 +17,4 @@ class LivroViewSet(ModelViewSet):
         elif self.action == "retrieve":
             return LivroDetailSerializer
         return LivroSerializer
+    

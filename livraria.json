@@ -10251,7 +10251,7 @@
     "user": 1,
     "content_type": 9,
     "object_id": "149",
-    "object_repr": "‎Intrínseca",
+    "object_repr": "Intrínseca",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -16908,7 +16908,7 @@
   "model": "livraria.editora",
   "pk": 116,
   "fields": {
-    "nome": "‎Penguin Companhia",
+    "nome": "Penguin Companhia",
     "site": null
   }
 },
@@ -17132,7 +17132,7 @@
   "model": "livraria.editora",
   "pk": 149,
   "fields": {
-    "nome": "‎Intrínseca",
+    "nome": "Intrínseca",
     "site": null
   }
 },
@@ -22783,7 +22783,7 @@
   "pk": 362,
   "fields": {
     "titulo": "O Alquimista",
-    "isbn": "‎978-8408206194",
+    "isbn": "978-8408206194",
     "quantidade": 15,
     "preco": "15.10",
     "categoria": 31,
@@ -23136,7 +23136,7 @@
   "pk": 387,
   "fields": {
     "titulo": "House of Leaves",
-    "isbn": "‎978-0375703768",
+    "isbn": "978-0375703768",
     "quantidade": 200,
     "preco": "45.00",
     "categoria": 57,
@@ -23813,7 +23813,7 @@
   "pk": 430,
   "fields": {
     "titulo": "Batman - Vitória Sombria",
-    "isbn": "‎8565484025",
+    "isbn": "8565484025",
     "quantidade": 3,
     "preco": "112.28",
     "categoria": 12,
@@ -24133,7 +24133,7 @@
   "pk": 451,
   "fields": {
     "titulo": "O Livro dos Espíritos",
-    "isbn": "‎ 8594662912",
+    "isbn": "8594662912",
     "quantidade": 3,
     "preco": null,
     "categoria": 62,
